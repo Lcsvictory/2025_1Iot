@@ -18,10 +18,10 @@ void loop()
   }
   delay(200);
   for(int i = 0; i < 3; i++) {
-  	digitalWrite(green, HIGH);
+  	digitalWrite(red, HIGH);
   	delay(300); // Wait for 1000 millisecond(s)
   
-  	digitalWrite(green, LOW);
+  	digitalWrite(red, LOW);
   	delay(200); // Wait for 1000 millisecond(s)
   }
   
@@ -32,5 +32,5 @@ void loop()
   	digitalWrite(red, LOW);
   	delay(100); // Wait for 1000 millisecond(s)
   }
-  delay(1000);
+  delay(800);
 }

@@ -1,36 +1,45 @@
+//define으로도 정의 가능함
+//#define TRIG 13 //트리거신호
+//#define ECHO 12 //받는신호
+
 int red = 7;
 int green = 8;
+int TRIG = 13;
+int ECHO = 12;
 
 void setup()
 {
+  Serial.begin(9600);
   pinMode(red, OUTPUT);
   pinMode(green, OUTPUT);
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  
 }
 
 void loop()
 {
-  for(int i = 0; i < 3; i++) {
-  	digitalWrite(red, HIGH);
-  	delay(200); // Wait for 1000 millisecond(s)
+  long duration, distance;
   
-  	digitalWrite(red, LOW);
-  	delay(100); // Wait for 1000 millisecond(s)
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+  
+  duration = pulseIn(ECHO, HIGH);
+  distance = duration / 58.2;
+  
+  if (distance >= 100) {
+    digitalWrite(red, HIGH);
+    digitalWrite(green, LOW);
   }
-  delay(200);
-  for(int i = 0; i < 3; i++) {
-  	digitalWrite(red, HIGH);
-  	delay(300); // Wait for 1000 millisecond(s)
-  
-  	digitalWrite(red, LOW);
-  	delay(200); // Wait for 1000 millisecond(s)
+  else {
+    digitalWrite(green, HIGH);
+    digitalWrite(red, LOW);
   }
   
-  for(int i = 0; i < 3; i++) {
-  	digitalWrite(red, HIGH);
-  	delay(200); // Wait for 1000 millisecond(s)
-  
-  	digitalWrite(red, LOW);
-  	delay(100); // Wait for 1000 millisecond(s)
-  }
-  delay(800);
+  Serial.print(distance);
+  Serial.println(" Cm");
+  delay(300);
 }

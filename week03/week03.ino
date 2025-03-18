@@ -17,9 +17,9 @@ void loop() {
   Vo_value = analogRead(Vo);
   delayMicroseconds(40);
   digitalWrite(V_led, HIGH); //적외선 끄기
-  delayMicroseconds(9860); //9.86초 
+  delayMicroseconds(9680); //9.68초 
 
-  Voltage = Vo_value * 5.0 / 1023/0;
+  Voltage = Vo_value * 5.0 / 1023.0;
   dustDensity = (Voltage - 0.5)/0.005;
 
   Serial.print("dust=");

@@ -2,15 +2,15 @@ import serial
 from influxdb_client import InfluxDBClient
 import time
 
-serial_port = 'COM'
+serial_port = 'COM2'
 baud_rate = 9600
 timeout = 2
 
 # influxDB V2 기본설정 (연결)
 influxdb_url = "http://localhost:8086"
-influxdb_token = "gFX84yWDeg6Ekby317PJJBSIBd_ivgweYA0FrnDrayc-Sl8yf1gpzCAtUXezNFQeeySCnPwUJxpw6kuTR1IWzQ=="
+influxdb_token = "2UlvrsSFdoDkcR6nCRQ3JPE-LXhhRfDdz7RfgtSfcdl-XuKM_l2SseNe2kPZD6vRi17hQ2CD6cQRjwkeQ3gu_A=="
 influxdb_org = "test"
-influxdb_bucket = "dustA"
+influxdb_bucket = "dust"
 
 #influxDB 클라이언트 초기화
 client = InfluxDBClient(url=influxdb_url, token=influxdb_token, org=influxdb_org)

@@ -1,21 +1,19 @@
-#include <SimpleTimer.h>
-SimpleTimer timerCnt;
+int a1 = 2;
+int a2 = 3;
+int a3;
 
-unsigned long loopCnt;
-
-void timerCntFunc() {
-  Serial.println(loopCnt);
-  loopCnt = 0;
-}
-
-void setup() {
+void setup(){
   Serial.begin(9600);
   Serial.println();
 
-  timerCnt.setInterval(1000, timerCntFunc);
+  sum(a2,a2,a3);
+  Serial.println(a3);
+}
+void loop() {
+
 }
 
-void loop() {
-  timerCnt.run();
-  loopCnt++;
+int sum(int a1, int a2, int& a3){
+  a3 = a1+a2;
+  return a3;
 }

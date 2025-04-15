@@ -1,6 +1,13 @@
 #include "LedToggle.h"
 
-LedToggle::LedToggle(int pin, int delay) {
+LedToggle::LedToggle(int pin) {
+	_pin = pin;
+	_state = false;
+	_delay = 500;
+	pinMode(_pin, OUTPUT);
+	digitalWrite(_pin, LOW);
+}
+LedToggle::LedToggle(int pin, unsigned long delay) {
 	_pin = pin;
 	_state = false;
 	_delay = delay;

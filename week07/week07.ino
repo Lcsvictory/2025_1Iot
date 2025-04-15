@@ -1,11 +1,10 @@
 #include <LedToggle.h>
 
-LedToggle led(LED_BUILTIN);
+LedToggle led(LED_BUILTIN, 50);
 
 void setup(){
 }
 
 void loop() {
   led.toggle();
-  delay(30);
 }

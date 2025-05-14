@@ -5,6 +5,7 @@ Arduino, Raspberry pi
 - arduino UNO 3
 - arduino IDE 2.3.5
 - influxdb 2.7.11
+- Raspberry pi 3
 ---
 
 ### arduino IDE 초기세팅

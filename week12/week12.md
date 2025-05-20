@@ -10,13 +10,13 @@ arduino uno 3
 
 
 ## influxdb install in **Raspberry PI 3** 
+#### 설치
+    sudo apt install influxdb
 
 
 ## grafana install in **Raspberry PI 3**
-
+#### 설치
+    sudo apt install grafana
 
 ## tips
-
-데이터를 파싱해야한다.
-데이터의 형태는 다양하니까
-
+- 데이터의 형태에 따라 적절한 파싱이 필요하다.

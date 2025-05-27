@@ -1,4 +1,4 @@
-# week12
+# week12 미세먼지 데이터를 저장하여 시각화 & 텔레그램 봇에 전송
 
 - 사용한것들
 ```
@@ -7,41 +7,44 @@ grafana
 arduino uno 3
 미세먼지센서
 ```
-
+## 작업흐름
+- 미세먼지 센서를 ``arduino uno 3`` 에 연결하여 PC와 직렬통신(serial)한다.
+- 수신받은 데이터를 ``influxdb``에 저장한다.
+- ``influxdb``에 저장된 데이터를 ``grafana``에서 시각화 한다.
 
 # influxdb install in **Raspberry PI 3** 
 
-## 0. 라즈베이파이 업데이트
+## 라즈베이파이 업데이트
 ```
   sudo apt update
   sudo apt upgrade
 ```
-## 1. Repository의 GPG key를 더하기
+## Repository의 GPG key를 더하기
 
 ```
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 
 ```
 
-## 2. Repository를 더하기
+## Repository를 더하기
 
 ```
 echo "deb https://repos.influxdata.com/debian stretch stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 ```
 
-## 3. 프로그램 설치
+## 프로그램 설치
 ```
 sudo apt update
 sudo apt install influxdb
 ```
-## 3.1 프로그램 실행 전 설정
+## 프로그램 실행 전 설정
 ```
 sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
 ```
 
-## 4. 데이터베이스 만들기
+## 데이터베이스 만들기
 ```
 $ influx
 
@@ -53,8 +56,26 @@ $ influx
 
 
 # grafana install in **Raspberry PI 3**
-#### 설치
-    sudo apt install grafana
+## Repository의 GPG key를 더하기
+```
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+
+## Repository를 더하기
+```
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```
+
+## 프로그램 설치
+```
+sudo apt update
+sudo apt install grafana
+```
+
+## 프로그램 실행
+```
+sudo service grafana-server start
+```
 
 ## tips
 - 데이터의 형태에 따라 적절한 파싱이 필요하다.

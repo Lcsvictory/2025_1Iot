@@ -1,4 +1,4 @@
-# TinyOS기반 Nesc프로그래밍 (온습도센서)
+# week13 TinyOS기반 Nesc프로그래밍 (온습도센서)
 - 사용한것들
 ```
 Cygwin

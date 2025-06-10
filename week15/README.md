@@ -1,12 +1,12 @@
-# week15 raspberry3¿¡ tinyos, NesC, influxdb ¼¼ÆÃ
+# week15 raspberry3ì— tinyos, NesC, influxdb ì„¸íŒ…
 
-**week10**Æú´õ¿¡ Á¤¸®µÊ.
+**week10**í´ë”ì— ì •ë¦¬ë¨.
 
-# zigbee node¸¦ ¿Â½Àµµ ¼¾¼­¿¡ ¿¬°áÇÏ¿© µ¥ÀÌÅÍ ¼ö½Å¹Þ±â
+# zigbee nodeë¥¼ ì˜¨ìŠµë„ ì„¼ì„œì— ì—°ê²°í•˜ì—¬ ë°ì´í„° ìˆ˜ì‹ ë°›ê¸°
 
 ```
-    µ¥ÀÌÅÍ ¼Û¼ö½Å¿¡´Â ³ëµå°¡ ÃÖ¼Ò 2°³°¡ ÇÊ¿äÇÏ´Ù.
-    ¼ö½Å³ëµå¿Í ¼Û½Å³ëµå, ¼Û½Å³ëµå´Â ¼¾¼­¿¡ ºÙ¾î¼­ ¼¾¼­ÀÇ µ¥ÀÌÅÍ¸¦ ¼ö½Å³ëµå¿¡°Ô     Àü¼ÛÇÑ´Ù. 
+    ë°ì´í„° ì†¡ìˆ˜ì‹ ì—ëŠ” ë…¸ë“œê°€ ìµœì†Œ 2ê°œê°€ í•„ìš”í•˜ë‹¤.
+    ìˆ˜ì‹ ë…¸ë“œì™€ ì†¡ì‹ ë…¸ë“œ, ì†¡ì‹ ë…¸ë“œëŠ” ì„¼ì„œì— ë¶™ì–´ì„œ ì„¼ì„œì˜ ë°ì´í„°ë¥¼ ìˆ˜ì‹ ë…¸ë“œì—ê²Œ     ì „ì†¡í•œë‹¤. 
     
 ```
 
